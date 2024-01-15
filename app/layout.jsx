@@ -1,4 +1,5 @@
 import './globals.css'
+import Navbar from "@/components/Navbar.jsx";
 
 export const metadata = {
   title: 'Second Project',
@@ -8,7 +9,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="container mx-auto flex justify-center items-center h-screen">{children}</body>
+      <body >
+        <Navbar />
+        <main className="container mx-auto flex justify-center items-center h-[calc(100vh-4rem)]">
+          {children}
+        </main>
+      </body>
     </html>
   )
 };
